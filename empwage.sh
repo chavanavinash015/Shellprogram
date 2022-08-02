@@ -1,21 +1,21 @@
 #!/bin/bash -x
 
-empRateperHr 20;
-isPartTime-1;
-IsFullTime-2;
+empRateperHr=20;
+isPartTime=1;
+IsFullTime=2;
 
-empCheck-$((RANDOM%3)):
+empCheck=$((RANDOM%3)):
 
 case $empCheck in 
 $isPartTime)
-        empHrs-4;;
+        empHrs=4;;
 $isFullTime)
-        empHrs-8;;
+        empHrs=8;;
 *)
-        empHrs-0;;
+        empHrs=0;;
 
 esac
 
-salary=$(( $empHrs * $empRatePerHr )):
+salary=$(( $empHrs * $empRateperHr )):
 echo $salary 
 
